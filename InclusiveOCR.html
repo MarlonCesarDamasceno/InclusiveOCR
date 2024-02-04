@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>InclusiveOCR</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://unpkg.com/tesseract.js@2.0.2/dist/tesseract.min.js"></script>
+    <script src="JS/Libs/LerArquivo.js"></script>
+    <script src="JS/ocr/Ocr.js"></script>
+    <script src="JS/ocr/ReconhecerArquivo.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Inclusive OCR - Acessibilidade</h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-justify">Inclusive OCR irá auxiliá-lo a extrair textos de imagens para tornar a análise do
+                    texto de uma forma mais acessível utilizando leitor de tela.</p>
+                <p class="text-justify">Importante ressaltar que a qualidade da conversão depende da qualidade do documento
+                    a ser reconhecido.
+                    <br>Documentos que tenham sido escritos a próprio punho ou a qualidade da imagem não esteja
+                    perfeita, o Inclusive OCR poderá encontrar dificuldades ao reconhecer os textos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Instrução</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-justify">Selecione o documento a ser reconhecido e posteriormente clique no botão reconhecer
+                    com o InclusiveOCR.
+                    <br>Aguarde até que o reconhecimento seja realizado. Quando a imagem for convertida para texto,
+                    uma tela abaixo será exibida com o texto extraído.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input type="file" id="arquivoSelecionado" accept="*" class="btn btn-secondary">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-success" onclick="IniciarOCR();">Reconhecer texto com InclusiveOCR
+                    <span class="glyphicon-floppy-save"></span></button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <p class="text-justify" id="notificacao" aria-live="polite"></p>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <span id="resultadoConversao" style="display:none ;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Resultado da conversão</h2>
+                    <br>
+
+                    <p class="text-justify" id="resultadoFinalOCR"></p>
+                </div>
+            </div>
+        </div>
+    </span>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Ferramenta Inclusive OCR - Acessibilidade</h3>
+                <p class="text-justify">Desenvolvido sob licença de código aberto.<br>Finalidade em auxiliar o
+                    reconhecimento de imagens cujo o texto não esteja acessível.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione o link para o arquivo Bootstrap JS (opcional, dependendo dos recursos que você está usando) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

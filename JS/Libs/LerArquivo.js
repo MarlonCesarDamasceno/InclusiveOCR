@@ -1,24 +1,30 @@
 function LerArquivo() {
-
-    let notificacaoErro = document.getElementById("notificacaoErro");
+    let arquivoConvertido="";
+    
     let obterArquivoSelecionado = document.getElementById('arquivoSelecionado');
 
     if (obterArquivoSelecionado.files.length > 0) {
         let arquivo = obterArquivoSelecionado.files[0];
+        alert("arquivo: " + arquivo.name); // Exemplo: Exibindo o nome do arquivo
 
         const reader = new FileReader();
 
         reader.onload = function (e) {
-            return arquivoConvertidoBase64 = e.target.result;
+            alert("base 64: " + e.target.result);
+            arquivoConvertido=ReconhecerOCR(e.target.result);
+
+
+            
         }
+
+        reader.readAsDataURL(arquivo); 
+        
+    } else {
+        return null;
     }
-    else {
-        notificacaoErro.innerHTML = "Erro: selecione o arquivo a ser reconhecido pelo OCR.";
+    if(arquivoConvertido!=null)
+    {
+        return arquivoConvertido;
+
     }
-    return null;
 }
-
-
-
-
-
