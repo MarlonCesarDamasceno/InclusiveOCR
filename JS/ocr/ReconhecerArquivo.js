@@ -30,3 +30,13 @@ function ReconhecerOCR(arquivo)
 }
 
 
+function NormalizaTexto(textoGerado)
+{
+    const numeroCaractereLinha=100;
+    
+    const regex = new RegExp(`.{1,${numeroCaractereLinha}}`, 'g');
+    return textoGerado.match(regex).join('\n');
+
+
+}
+
