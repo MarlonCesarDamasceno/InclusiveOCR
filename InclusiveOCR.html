@@ -12,6 +12,7 @@
     <script src="Aplicacao/OCR/Alerta.js"></script>
     <script src="Aplicacao/OCR/ProcessarArquivo.js"></script>
     <script src="Aplicacao/OCR/Ocr.js"></script>
+    <link rel="stylesheet" href="Aplicacao/Tema/Tema.css">
     
 </head>
 
@@ -54,7 +55,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <input type="file" id="arquivoSelecionado" accept="*" class="btn btn-secondary">
+                <input type="file" id="arquivoSelecionado" accept=".jpg" class="btn btn-secondary">
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-success" onclick="IniciarOCR();">Reconhecer texto com InclusiveOCR
@@ -79,6 +80,7 @@
                     <br>
 
                     <p class="text-justify" id="resultadoFinalOCR"></p>
+                    <br>
                 </div>
             </div>
         </div>
@@ -88,13 +90,13 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Ferramenta Inclusive OCR - Acessibilidade</h3>
-                <p class="text-justify">Desenvolvido sob licença de código aberto.<br>Finalidade em auxiliar o
+                <p class="text-justify">Desenvolvido por Marlon Cesar Damasceno.<br>Licença de código aberto.<br>Finalidade em auxiliar o
                     reconhecimento de imagens cujo o texto não esteja acessível.</p>
             </div>
         </div>
     </div>
 
-    <!-- Adicione o link para o arquivo Bootstrap JS (opcional, dependendo dos recursos que você está usando) -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

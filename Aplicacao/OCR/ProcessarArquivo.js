@@ -1,4 +1,5 @@
 function LerArquivo() {
+    let arquivoConvertido="";
     let obterArquivoSelecionado = document.getElementById('arquivoSelecionado');
 
     if (obterArquivoSelecionado.files.length > 0) {
@@ -24,6 +25,7 @@ function LerArquivo() {
         return arquivoConvertido;
 
     }
+    
 }
 
 
@@ -34,13 +36,13 @@ function ReconhecerOCR(arquivo) {
     let arquivoConvertidoOcr = "";
     let notificacao = document.getElementById("notificacao");
     notificacao.innerHTML = "Aguarde, reconhecendo documento...";
-    AlertaSonoro("Ring02");
+    AlertaSonoro("Ring02", true);
 
     setTimeout(function () {
 
         notificacao.innerHTML = "";
 
-    }, 4000);
+    }, 50000);
 
     Tesseract.recognize(
         arquivo,
@@ -49,13 +51,14 @@ function ReconhecerOCR(arquivo) {
 
         resultadoFinal.innerHTML = NormalizaTexto(text);
         notificacao.innerHTML = "Arquivo convertido!";
-        AlertaSonoro("Windows Notify Messaging");
+        AlertaSonoro("Windows Notify Messaging", false);
 
         setTimeout(function () {
 
             notificacao.innerHTML = "";
+            resultadoConversaoExibirTela.style.display = "block";
 
-        }, 4000);
+        }, 2000);
 
 
 
@@ -69,7 +72,7 @@ function ReconhecerOCR(arquivo) {
     });
 
 
-    resultadoConversaoExibirTela.style.display = "block";
+    
 }
 
 

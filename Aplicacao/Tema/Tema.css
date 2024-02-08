@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    /* Cor de fundo - Cinza claro */
+    color: #343a40;
+    /* Cor do texto - Cinza escuro */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #007bff;
+    /* Azul brilhante para títulos */
+}
+
+a {
+    color: #17a2b8;
+    /* Azul turquesa para links */
+}
+
+a:hover {
+    color: #0056b3;
+    /* Azul mais escuro ao passar o mouse */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Azul brilhante para botões */
+    border-color: #007bff;
+    /* Cor da borda */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Azul mais escuro ao passar o mouse */
+    border-color: #0056b3;
+}
+
+
+footer {
+    background-color: #343a40;
+    /* Cinza escuro para o rodapé */
+    color: #ffffff;
+    /* Cor do texto - Branco */
+    padding: 10px;
+}
